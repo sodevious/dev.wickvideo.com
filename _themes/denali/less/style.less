@@ -1,0 +1,397 @@
+@import "mixins.less";
+
+
+// Variables
+@lightBlue: #cadeea;
+@medBlue: #7AB6D3;
+@darkBlue: #458BB1;
+@lightRed: #F3566D;
+@medRed: #EF2A4B;
+@lightGray: #899199;
+@darkGrey: #484549;
+@darkBlueSat: #73ACC7;
+
+// General
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+section {
+	padding: 80px 0px;
+}
+h1, h2, h3, h4, h5, h6 { 
+    line-height: 1.2; 
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+h2 {
+	text-align: center;
+	font-size: 44px;
+	font-weight: 300;
+}
+// From CSS-Tricks
+.videoWrapper {
+	position: relative;
+	padding-bottom: 49%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+// Repeatable 
+.triangle {
+	background-image: url("../img/triangles.png"), url("../img/triangles-down.png");
+	background-repeat: repeat-x;
+	background-position: bottom, top;
+	background-color: @lightBlue;
+	&:first-child {
+		background-image: url("../img/triangles.png");
+	}
+}
+.circle {
+	text-align: center;
+	display: block;
+	color: white;
+	width: 120px;
+	height: 120px;
+	margin: 0px auto;
+	margin-bottom: 50px;
+	.border-radius(60px);
+}
+.intro-copy {
+	text-align: center;
+	font-size: 1.2em;
+}
+.links a {
+	.button-base;
+	background-color: @lightRed;
+	margin: 0px auto;
+	width: 50%;
+	margin-top: 30px;
+	&:hover {
+		background: darken(@lightRed, 8%);
+		text-decoration: none;
+	}
+	span { margin-left: 5px; }
+}
+
+
+// Styles
+#intro {
+	padding-top: 40px;
+	
+	.logo {
+		text-align: center;
+		h1 {
+			margin: 0px auto;
+			max-width: 300px;
+			height: 60px;
+			background: url("../img/wick-video-logo.png");
+			text-indent: -9999px;
+			background-size: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			margin-bottom: 30px;
+		}
+	}
+	.vimeo_embed {
+		display: block;
+		margin: 0px auto;
+
+		iframe {
+			padding: 6px;
+			background: white;
+			.border-radius(4px); 
+			.box-sizing(border-box);
+		}
+	}
+	.buttons {
+		margin: 30px 0px;
+		a {
+			width: 49%;
+			float: left;
+			display: inline-block;
+			.box-sizing(border-box);
+			.button-base;
+			
+			span { margin-left: 5px; }
+			
+			&:last-child { margin-left: 2%; }
+			&:hover {
+				background: darken(@medBlue, 8%);
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// About Section
+#about {
+	background: white;
+	h2 { color: @medRed; }
+	h3 {
+		font-weight: 500;
+		margin-bottom: 4px;
+		font-size: 22px;
+	}
+	.teamNav {
+		display: block;
+		
+		ul {
+			margin: 0px;
+			text-align: center;
+			padding: 0; 
+			
+			li {
+				list-style-type: none;
+				text-align: left;
+				display: inline-block;
+
+				* { opacity: 0.7; }		
+				
+				a {					
+					display: inline-block;
+					img { height: 155px; }
+				}	
+			}
+			
+		}
+		.ui-tabs-active * { opacity: 1; }
+	}
+	.teamBio {
+		margin-top: 1em;
+		span { font-style: italic; }
+	}
+	.flame-icon {
+		.circle;
+		background: @medRed;
+		font-size: 70px;
+	}
+}
+
+
+// Process Section
+#process {
+	h2 { color: @darkBlue; }
+	.process-copy {
+		height: 9em;
+		text-align: center;
+		p { font-size: 1em; }
+		h3 {
+			font-weight: 700;
+			margin-bottom: 0.5em;
+		}
+	}
+	.process-icon {
+		.circle;
+		background: @darkBlue;
+		font-size: 70px;	
+	}
+	.circle-nav {
+		ul { margin-left: 0; display: block; }
+
+		li {
+			width: 16.6%;
+			text-align: center;
+			float: left;
+			outline: none;
+			list-style-type: none;
+			margin: 0;
+		}
+
+		a {
+			background: @lightGray;
+			text-align: center;
+			display: block;
+			color: white;
+			width: 50px;
+			height: 50px;
+			font-size: 1.5em;
+			outline: none;
+			line-height: 2em;
+			margin: 0px auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			.border-radius(50px);
+			&:hover { text-decoration: none; background-color: @darkGrey;}
+		}
+
+		.ui-state-active a { 
+			text-decoration: none; 
+			outline: none;
+			background-color: @darkGrey;
+		}
+	}
+}
+
+
+// Work Section
+#work {
+	h2 { color: @medRed; }
+	.play-icon {
+		.circle;
+		background: @medRed;
+		font-size: 48px;
+		line-height: 2.4em;
+	}
+	.arrows {
+		span {
+			text-align: center;
+			font-size: 50px;
+			padding: 20px;
+			display: block;
+		}
+		a {
+			color: @lightBlue;
+			&:hover {
+				text-decoration: none;
+				color: @medBlue;
+			}
+		}
+	}
+}
+
+#connect {
+	h2 { color: @darkBlue; }
+	.flame-icon {
+		.circle;
+		background: @darkBlue;
+		font-size: 70px;
+	}
+	
+	 input, textarea {
+	 	color:  white;
+	 	background-color: @darkBlueSat;
+	 	.border-radius(0px);
+	 	border-left: 0px;
+	 	border-top: 0px;
+	 	font-size: 20px;
+	 	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	 	font-weight: 100;
+	 	font-style: italic;
+	 	text-align: center;
+	 	border-right: 1px solid darken(@darkBlueSat, 25%);
+	 	border-bottom: 1px solid darken(@darkBlueSat, 25%);
+	 }
+}
+
+// Footer
+footer {
+	text-align: center;
+	.social a {
+		.circle;
+		.border-radius(50px);
+		background: @lightGray;
+		font-size: 20px;
+		height: 40px;
+		width: 40px;
+		display: inline-block;
+		margin-top: 30px;
+		line-height: 40px;
+		margin-bottom: 30px;
+		margin-right: 8px;
+		margin-left: 8px;
+
+		&:hover {
+			background: @medRed;
+			text-decoration: none;
+			color: white;
+		}
+	}
+}
+
+li.rs-carousel-item {
+	list-style-type: none;
+	float: left;
+	display: block;
+	padding: 20px;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+
+// Media Queries
+
+@media (min-width: 30em) {
+	.videoWrapper { padding-bottom: 53%; }	
+
+	#work .arrows {
+		span {
+			text-align: center;
+			font-size: 80px;
+			display: block;
+			margin-top: 1.4em;
+		}
+	}
+	
+}
+@media (min-width: 30em) and (max-width: 50em)  {	
+	#about {
+		.teamNav {
+			width: 97%;
+			text-align: center;
+		}
+		.teamBio { width: 97%; }
+		.teamNav ul li {
+			margin-right: 0px;
+			a img { height: 210px; } 
+		}	
+	}
+	.links a { width: 100%; }
+}
+
+@media (min-width: 50em) {	
+	#intro .vimeo_embed {
+		display: block;
+		max-width: 65%;
+	}
+	#process .circle-nav a {
+		background: @lightGray;
+		text-align: center;
+		display: block;
+		color: white;
+		width: 60px;
+		height: 60px;
+		font-size: 2em;
+		outline: none;
+		line-height: 1.8em;
+		margin: 0px auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		.border-radius(50px);
+	}
+	#process .process-copy { height: 10em; }
+	
+	footer .social a {
+			.border-radius(50px);
+			font-size: 31px;
+			height: 50px;
+			line-height: 50px;
+			width: 50px;
+			margin-right: 4px;
+			margin-left: 4px;
+		}
+		
+		#about .teamNav ul li {
+			margin-top: 30px;
+			a img { height: 176px; } 
+		}
+}
+
+@media (min-width: 58em) {	
+	#about .teamNav ul li {
+		margin-top: 30px;
+		a img { height: 200px; } 
+	}
+}
+
+
+@import "../css/fonts.css";
+@import "css/jquery.rs.carousel.css";

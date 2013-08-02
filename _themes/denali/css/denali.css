@@ -1,0 +1,509 @@
+@import "../css/fonts.css";
+
+@import "css/jquery.rs.carousel.css";
+.button-base {
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 6px 0;
+  text-align: center;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background: #7ab6d3;
+}
+.button-base:hover {
+  text-decoration: none;
+}
+.center {
+  margin: 0px auto;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+section {
+  padding: 80px 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+h2 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 300;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 49%;
+  /* 16:9 */
+
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.triangle {
+  background-image: url("../img/triangles.png"), url("../img/triangles-down.png");
+  background-repeat: repeat-x;
+  background-position: bottom, top;
+  background-color: #cadeea;
+}
+.triangle:first-child {
+  background-image: url("../img/triangles.png");
+}
+.circle {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.intro-copy {
+  text-align: center;
+  font-size: 1.2em;
+}
+.links a {
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 6px 0;
+  text-align: center;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background: #7ab6d3;
+  background-color: #f3566d;
+  margin: 0px auto;
+  width: 50%;
+  margin-top: 30px;
+}
+.links a:hover {
+  text-decoration: none;
+}
+.links a:hover {
+  background: #f0304c;
+  text-decoration: none;
+}
+.links a span {
+  margin-left: 5px;
+}
+#intro {
+  padding-top: 40px;
+}
+#intro .logo {
+  text-align: center;
+}
+#intro .logo h1 {
+  margin: 0px auto;
+  max-width: 300px;
+  height: 60px;
+  background: url("../img/wick-video-logo.png");
+  text-indent: -9999px;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+#intro .vimeo_embed {
+  display: block;
+  margin: 0px auto;
+}
+#intro .vimeo_embed iframe {
+  padding: 6px;
+  background: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#intro .buttons {
+  margin: 30px 0px;
+}
+#intro .buttons a {
+  width: 49%;
+  float: left;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 6px 0;
+  text-align: center;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background: #7ab6d3;
+}
+#intro .buttons a:hover {
+  text-decoration: none;
+}
+#intro .buttons a span {
+  margin-left: 5px;
+}
+#intro .buttons a:last-child {
+  margin-left: 2%;
+}
+#intro .buttons a:hover {
+  background: #5ba5c9;
+  text-decoration: none;
+}
+#about {
+  background: white;
+}
+#about h2 {
+  color: #ef2a4b;
+}
+#about h3 {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+#about .teamNav {
+  display: block;
+}
+#about .teamNav ul {
+  margin: 0px;
+  text-align: center;
+  padding: 0;
+}
+#about .teamNav ul li {
+  list-style-type: none;
+  text-align: left;
+  display: inline-block;
+}
+#about .teamNav ul li * {
+  opacity: 0.7;
+}
+#about .teamNav ul li a {
+  display: inline-block;
+}
+#about .teamNav ul li a img {
+  height: 155px;
+}
+#about .teamNav .ui-tabs-active * {
+  opacity: 1;
+}
+#about .teamBio {
+  margin-top: 1em;
+}
+#about .teamBio span {
+  font-style: italic;
+}
+#about .flame-icon {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #ef2a4b;
+  font-size: 70px;
+}
+#process h2 {
+  color: #458bb1;
+}
+#process .process-copy {
+  height: 9em;
+  text-align: center;
+}
+#process .process-copy p {
+  font-size: 1em;
+}
+#process .process-copy h3 {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+#process .process-icon {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #458bb1;
+  font-size: 70px;
+}
+#process .circle-nav ul {
+  margin-left: 0;
+  display: block;
+}
+#process .circle-nav li {
+  width: 16.6%;
+  text-align: center;
+  float: left;
+  outline: none;
+  list-style-type: none;
+  margin: 0;
+}
+#process .circle-nav a {
+  background: #899199;
+  text-align: center;
+  display: block;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  outline: none;
+  line-height: 2em;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#process .circle-nav a:hover {
+  text-decoration: none;
+  background-color: #484549;
+}
+#process .circle-nav .ui-state-active a {
+  text-decoration: none;
+  outline: none;
+  background-color: #484549;
+}
+#work h2 {
+  color: #ef2a4b;
+}
+#work .play-icon {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #ef2a4b;
+  font-size: 48px;
+  line-height: 2.4em;
+}
+#work .arrows span {
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+  display: block;
+}
+#work .arrows a {
+  color: #cadeea;
+}
+#work .arrows a:hover {
+  text-decoration: none;
+  color: #7ab6d3;
+}
+#connect h2 {
+  color: #458bb1;
+}
+#connect .flame-icon {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #458bb1;
+  font-size: 70px;
+}
+#connect input,
+#connect textarea {
+  color: white;
+  background-color: #73acc7;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-left: 0px;
+  border-top: 0px;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+  border-right: 1px solid #356c85;
+  border-bottom: 1px solid #356c85;
+}
+footer {
+  text-align: center;
+}
+footer .social a {
+  text-align: center;
+  display: block;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #899199;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  margin-top: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+footer .social a:hover {
+  background: #ef2a4b;
+  text-decoration: none;
+  color: white;
+}
+li.rs-carousel-item {
+  list-style-type: none;
+  float: left;
+  display: block;
+  padding: 20px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+@media (min-width: 30em) {
+  .videoWrapper {
+    padding-bottom: 53%;
+  }
+  #work .arrows span {
+    text-align: center;
+    font-size: 80px;
+    display: block;
+    margin-top: 1.4em;
+  }
+}
+@media (min-width: 30em) and (max-width: 50em) {
+  #about .teamNav {
+    width: 97%;
+    text-align: center;
+  }
+  #about .teamBio {
+    width: 97%;
+  }
+  #about .teamNav ul li {
+    margin-right: 0px;
+  }
+  #about .teamNav ul li a img {
+    height: 210px;
+  }
+  .links a {
+    width: 100%;
+  }
+}
+@media (min-width: 50em) {
+  #intro .vimeo_embed {
+    display: block;
+    max-width: 65%;
+  }
+  #process .circle-nav a {
+    background: #899199;
+    text-align: center;
+    display: block;
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    outline: none;
+    line-height: 1.8em;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  #process .process-copy {
+    height: 10em;
+  }
+  footer .social a {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 31px;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+  #about .teamNav ul li {
+    margin-top: 30px;
+  }
+  #about .teamNav ul li a img {
+    height: 176px;
+  }
+}
+@media (min-width: 58em) {
+  #about .teamNav ul li {
+    margin-top: 30px;
+  }
+  #about .teamNav ul li a img {
+    height: 200px;
+  }
+}

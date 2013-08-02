@@ -1,0 +1,11 @@
+title: Team
+
+fields:
+
+  role:
+    display: Role
+
+  content:
+    display: Bio
+    default:
+    type: markitup

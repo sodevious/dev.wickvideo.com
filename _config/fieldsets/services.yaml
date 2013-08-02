@@ -1,0 +1,8 @@
+title: Services
+
+fields:
+
+  content:
+    display: Service Description
+    default:
+    type: markitup

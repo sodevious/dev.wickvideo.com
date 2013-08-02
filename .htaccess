@@ -1,0 +1,45 @@
+# Turn on the Rewrite Engine
+RewriteEngine On
+
+# If you're running in a subfolder (like http://example.com/statamic),
+# add that here. E.g. /statamic/
+RewriteBase /
+
+# Protect your system files from prying eyes
+RewriteRule ^(_app) - [F,L]
+RewriteRule ^(_config) - [F,L]
+RewriteRule ^(_content) - [F,L]
+RewriteRule ^(.*)?\.yml$ - [F,L]
+Rewriterule ^(.*)?\.yaml$ - [F,L]
+RewriteRule ^(.*/)?\.git+ - [F,L]
+
+# This will prevent all .html files from being accessed.
+# You may want to remove this line if you want to serve
+# static files outside of Statamic
+Rewriterule ^(.*)?\.html$ - [F,L]
+
+# Remove trailing slashes from your URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
+
+# Remove the index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+## EXPIRES CACHING ##
+
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+## ExpiresByType text/css "access plus 1 month"
+## ExpiresByType application/pdf "access plus 1 month"
+## ExpiresByType text/x-javascript "access plus 1 month"
+## ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+
+## EXPIRES CACHING ##

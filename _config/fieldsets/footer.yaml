@@ -1,0 +1,26 @@
+title: Footer
+
+fields:
+
+  twitter:
+    display: Twitter Link
+
+  facebook:
+    display: Facebook Link
+
+  instagram:
+    display: Instagram Link
+
+  linkedin:
+    display: LinkedIn Link
+
+  vimeo:
+    display: Vimeo Link
+
+  youtube:
+    display: YouTube Link
+
+  content:
+    display: Address
+    default:
+    type: markitup
