@@ -13,7 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_Ryan}", "mouseover", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_StageRy}", "mouseover", function(sym, e) {
          sym.play();
          
 
@@ -23,4 +23,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("stage");
    //Edge symbol end:'stage'
 
-})(jQuery, AdobeEdge, "EDGE-39292798");
+})(jQuery, AdobeEdge, "ryan");

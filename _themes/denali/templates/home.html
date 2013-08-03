@@ -106,12 +106,8 @@
 		<div class="grid-2 offset-2 links">
 			<a href="#work" target="_self">Work <span aria-hidden="true" class="icon-chevron-down"></span></a>
 		</div>
-		
-		
+	
 	</div>
-	
-	
-		
 </section>
 
 
@@ -133,6 +129,7 @@
 						{{ /pages:listing }}
 					</ul>
 				</div>
+			</div>
 	
 		<div class="grid-1 arrows next"></div>
 	</div>
@@ -167,11 +164,11 @@
                 {{ if success }}
                     <p>Your message has been sent!</p>
                 {{ else }}
-                        <input type="text" name="name" id="name" value="Full Name">
+                        <input type="text" name="name" id="name" placeholder="Full Name">
 
-                        <input type="text" name="from" id="from" value="Email Address">
+                        <input type="text" name="from" id="from" placeholder="Email Address">
                     
-                        <textarea name="message" id="message">How May We Help You?</textarea>
+                        <textarea name="message" id="message" placeholder="How May We Help You?"></textarea>
                     
                     <div><input type="submit"></div>
                 {{ endif }}

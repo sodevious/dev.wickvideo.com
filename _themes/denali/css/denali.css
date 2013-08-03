@@ -1,6 +1,8 @@
 @import "../css/fonts.css";
 
-@import "css/jquery.rs.carousel.css";
+@import "../css/jquery.rs.carousel.css";
+
+@import "../css/kraken.css";
 .button-base {
   display: block;
   color: white;
@@ -376,6 +378,18 @@ h2 {
   text-align: center;
   border-right: 1px solid #356c85;
   border-bottom: 1px solid #356c85;
+}
+#connect ::-webkit-input-placeholder {
+  color: white;
+}
+#connect :-moz-placeholder {
+  color: white;
+}
+#connect ::-moz-placeholder {
+  color: white;
+}
+#connect :-ms-input-placeholder {
+  color: white;
 }
 footer {
   text-align: center;

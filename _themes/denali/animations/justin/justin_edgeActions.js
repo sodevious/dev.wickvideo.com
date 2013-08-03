@@ -6,10 +6,6 @@
 * ability to interact with these actions from within Adobe Edge Animate
 *
 ***********************/
-$("li.justin").hover( function() {
-
-
-
 (function($, Edge, compId){
 var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonly used Edge classes
 
@@ -17,7 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_Justin}", "mouseover", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_StageJu}", "mouseover", function(sym, e) {
          sym.play();
          
 
@@ -27,6 +23,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("stage");
    //Edge symbol end:'stage'
 
-})(jQuery, AdobeEdge, "EDGE-38945589");
-
-});
+})(jQuery, AdobeEdge, "justin");

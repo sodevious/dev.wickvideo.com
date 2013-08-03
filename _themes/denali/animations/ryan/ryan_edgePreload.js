@@ -50,8 +50,10 @@ if(document.addEventListener ){
     };
 
    aLoader = [
-          { load: "assets/animations/ryan/ryan_edge.js"},
-          { load: "assets/animations/ryan/ryan_edgeActions.js"}];
+   { load: "assets/edge_includes/jquery-1.7.1.min.js"},
+   { load: "assets/edge_includes/edge.2.0.0.min.js"},
+      { load: "assets/animations/ryan/ryan_edge.js"},
+      { load: "assets/animations/ryan/ryan_edgeActions.js"}];
 
 if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResources=doLoadResources; AdobeEdge.playWhenReady=playWhenReady; }
 
@@ -61,4 +63,4 @@ preContent={dom: [ ]};//simpleContent
 
 dlContent={dom: [ ]};//simpleContent
 
-})( "EDGE-39292798");
+})( "ryan");
